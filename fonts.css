@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "Terminal";
+  src: local("Courier New");
+}
+body, input {
+  font-family: "Terminal", monospace;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>🌐 Social Channels — Browser Terminal 1.0.1v</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Hunter Tigner" />
+  <link rel="stylesheet" href="css/maincommands.css" />
+  <link rel="stylesheet" href="css/themecommands.css" />
+  <script src="js/socials.js" defer></script>
+  <style>
+    body {
+      background-color: #000;
+      color: #00ff00;
+      font-family: 'Cascadia Code', Consolas, monospace;
+      padding: 20px;
+      background-image: radial-gradient(circle at top, #002200, #000000 80%);
+    }
+
+    h1 {
+      text-shadow: 0 0 8px #00ff00;
+      font-size: 1.8em;
+      margin-bottom: 24px;
+    }
+
+    .link-panel {
+      border: 1px solid #00ff00;
+      padding: 20px;
+      background-color: #0c0c0c;
+      box-shadow: 0 0 12px #00ff00;
+      border-radius: 6px;
+      max-width: 700px;
+      margin-bottom: 20px;
+    }
+
+    .social-link {
+      display: block;
+      margin-bottom: 12px;
+      background-color: #1a1a1a;
+      color: #00ff00;
+      border: 1px solid #00ff00;
+      padding: 10px 16px;
+      font-family: 'Cascadia Code', Consolas, monospace;
+      text-decoration: none;
+      box-shadow: 0 0 6px #00ff00;
+      transition: background-color 0.3s ease;
+    }
+
+    .social-link:hover {
+      background-color: #333;
+      box-shadow: 0 0 10px #00ff00;
+    }
+
+    .btn-refresh {
+      margin-top: 20px;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.85em;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>🌐 Connect to the Terminal Web</h1>
+
+    <div class="link-panel">
+      <a href="https://bsky.app/profile/webterminal.bsky.social" target="_blank" class="social-link">🌀 BlueSky Profile</a>
+      <a href="https://steamcommunity.com/id/profileglazegamingyoutuber/" target="_blank" class="social-link">🎮 Steam Community</a>
+      <a href="https://discord.gg/hBmPYtp9ey" target="_blank" class="social-link">💬 Discord Server</a>
+      <button class="social-link btn-refresh" onclick="refreshSocials()">🔄 Refresh Links</button>
+    </div>
+
+    <footer>
+      <p>Browser Terminal 1.0.1v — Not affiliated with Microsoft Corporation</p>
+      <p>Social channels linked with glowing integrity.</p>
+    </footer>
+  </main>
+</body>
+</html>

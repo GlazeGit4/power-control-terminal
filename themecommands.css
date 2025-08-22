@@ -1,0 +1,25 @@
+.btn-nav {
+  display: inline-block;
+  text-decoration: none;
+  color: #00ff00;
+  background-color: #1a1a1a;
+  border: 1px solid #00ff00;
+  padding: 10px 16px;
+  box-shadow: 0 0 8px #00ff00;
+  transition: background-color 0.3s ease;
+  font-family: 'Cascadia Code', Consolas, monospace;
+}
+
+.btn-nav:hover {
+  background-color: #333;
+  box-shadow: 0 0 12px #00ff00;
+}
+
+li {
+  padding: 4px 0;
+  transition: color 0.2s;
+}
+
+li:hover {
+  color: #99ff99;
+}

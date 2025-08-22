@@ -1,0 +1,10 @@
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+#banner {
+  animation: flicker 2s infinite;
+}
+.splash h2 {
+  text-shadow: 0 0 8px var(--accent);
+}

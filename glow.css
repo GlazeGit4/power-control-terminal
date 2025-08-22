@@ -1,0 +1,110 @@
+/* ─── Cursor Glow ────────────────────────────────────── */
+.cursor-glow {
+  position: fixed;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #00ff95;
+  box-shadow: 0 0 10px #00ff95, 0 0 25px #00ff95;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+/* ─── Glowing Headings ───────────────────────────────── */
+.glow-text {
+  color: #00ffb2;
+  text-shadow: 0 0 15px #00ffb2, 0 0 30px #00ffb2;
+}
+
+.banner-glow {
+  animation: bannerPulse 3s infinite ease-in-out;
+}
+
+/* ─── CashTag Effects ───────────────────────────────── */
+.cash-tag:hover {
+  box-shadow: 0 0 10px #00ff95, 0 0 20px #00ff95;
+  border-color: #00ff95;
+  transform: scale(1.03);
+}
+
+/* ─── Link Glows ─────────────────────────────────────── */
+.cash-link:hover,
+.social-links a:hover {
+  color: #00ffaa;
+  text-shadow: 0 0 10px #00ffaa, 0 0 20px #00ffaa;
+}
+
+/* ─── Badge Glows ────────────────────────────────────── */
+.badge.glow {
+  color: #00ff95;
+  text-shadow: 0 0 5px #00ff95, 0 0 10px #00ff95;
+}
+
+.badge.pulse {
+  animation: pulseGlow 1.5s infinite ease-in-out;
+}
+
+.badge.glitchy {
+  animation: glitchFlicker 0.4s infinite;
+  text-shadow: 0 0 8px #00ffb2, 0 0 12px #00ffb2;
+}
+
+.badge.shimmer {
+  background: linear-gradient(90deg, #00ffb2, #00ffa2, #00ffb2);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shimmerWave 2s linear infinite;
+}
+
+.badge.legacy {
+  color: #ffbb00;
+  text-shadow: 0 0 10px #ffbb00, 0 0 20px #ffbb00;
+}
+
+/* ─── Glitch Overlay ─────────────────────────────────── */
+.glitch-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: rgba(0, 255, 149, 0.02);
+  animation: flickerGlitch 3s infinite;
+  z-index: 1;
+}
+
+/* ─── Selection Color ────────────────────────────────── */
+::selection {
+  background: orange;
+  color: #0d0d0d;
+}
+::-moz-selection {
+  background: orange;
+  color: #0d0d0d;
+}
+
+/* ─── Animations ─────────────────────────────────────── */
+@keyframes pulseGlow {
+  0%   { text-shadow: 0 0 5px #00ff95; }
+  50%  { text-shadow: 0 0 20px #00ff95; }
+  100% { text-shadow: 0 0 5px #00ff95; }
+}
+
+@keyframes glitchFlicker {
+  0%, 100% { opacity: 1; transform: translate(0, 0); }
+  33%      { opacity: 0.7; transform: translate(1px, -1px); }
+  66%      { opacity: 0.5; transform: translate(-1px, 1px); }
+}
+
+@keyframes shimmerWave {
+  0%   { background-position: 0% }
+  100% { background-position: 100% }
+}
+
+@keyframes flickerGlitch {
+  0%, 100% { opacity: 0.01 }
+  45%      { opacity: 0.04 }
+  70%      { opacity: 0.025 }
+}

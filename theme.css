@@ -1,0 +1,11 @@
+:root {
+  --blurple: #5865F2;
+  --neon: #00ff9f;
+  --accent: #ff6fd8;
+}
+.banner, .splash {
+  color: var(--blurple);
+}
+.help ul li {
+  color: var(--accent);
+}

@@ -1,0 +1,7 @@
+.terminal-frame {
+  border: 3px dashed #00ffb2;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 6px;
+}

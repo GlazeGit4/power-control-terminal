@@ -1,0 +1,13 @@
+body {
+  background: #0f0f0f;
+  color: #00ff9f;
+  font-family: 'Courier New', monospace;
+  margin: 0;
+}
+
+#terminal {
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}

@@ -1,0 +1,17 @@
+body {
+  font-family: 'Courier New', monospace;
+  background: #0a0a0a;
+  color: #00ffb2;
+  text-align: center;
+  padding: 2rem;
+}
+.cash-tag {
+  font-size: 1.5rem;
+  padding: 1rem;
+  border: 2px solid #00ffb2;
+  display: inline-block;
+}
+.cash-link {
+  color: #00ffb2;
+  text-decoration: underline;
+}

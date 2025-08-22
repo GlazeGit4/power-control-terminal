@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  background-color: #000;
+  color: #00ff00;
+  font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
+}
+
+main {
+  padding: 20px;
+}
+
+h1 {
+  text-shadow: 0 0 6px #00ff00;
+  margin-bottom: 20px;
+}
+
+ul.command-list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+footer {
+  font-size: 0.85em;
+  color: #00ff00;
+}

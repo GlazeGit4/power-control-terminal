@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PowerControl Terminal 1.07v</title>
+  <meta name="description" content="A browser-based terminal simulation with command parsing and retro aesthetics." />
+  <meta name="author" content="Hunter Tigner" />
+
+  <!-- Open Graph & Theme Metadata -->
+  <meta property="og:title" content="PowerControl Terminal 1.07v" />
+  <meta property="og:description" content="Browser Terminal 1.0.1v — Not affiliated with Microsoft. Created by Hunter and Microsoft and EdgeOne has every right to take down my site or block it." />
+  <meta property="og:url" content="https://powercontrol.edgeone.app/" />
+  <meta property="og:image" content="https://i.postimg.cc/gjp4xCFs/Screenshot-2025-08-19-222312.png" />
+  <meta name="theme-color" content="#00ff1eff" />
+  <meta name="youtube:card" content="summary_large_image" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="theme.css" />
+  <link rel="stylesheet" href="layout.css" />
+  <link rel="stylesheet" href="effects.css" />
+  <link rel="stylesheet" href="fonts.css" />
+
+  <!-- Navigation & Support styles -->
+  <style>
+    #support-link {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 100;
+    }
+
+    .btn-support,
+    .btn-commandlist,
+    .btn-credits,
+    .btn-tos,
+    .btn-privacy,
+    .btn-join-discord,
+    .btn-donate,
+    .btn-socials {
+      background-color: #1a1a1a;
+      color: #00ff00;
+      border: 1px solid #00ff00;
+      padding: 10px 16px;
+      font-family: 'Cascadia Code', Consolas, monospace;
+      text-decoration: none;
+      box-shadow: 0 0 8px #00ff00;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+
+    .btn-support:hover,
+    .btn-commandlist:hover,
+    .btn-credits:hover,
+    .btn-tos:hover,
+    .btn-privacy:hover,
+    .btn-join-discord:hover,
+    .btn-donate:hover,
+    .btn-socials:hover {
+      background-color: #333;
+      box-shadow: 0 0 12px #00ff00;
+    }
+  </style>
+
+  <!-- Scripts -->
+  <script src="core.js" defer></script>
+  <script src="commands.js" defer></script>
+  <script src="engine.js" defer></script>
+  <script src="visuals.js" defer></script>
+  <script src="boot.js" defer></script>
+  <script src="save.js" defer></script>
+  <script src="unsave.js" defer></script>
+
+  <!-- Protocol Summon Logic -->
+  <script>
+    function openDiscord() {
+      window.location.href = "discord://";
+      setTimeout(() => {
+        window.location.href = "https://discord.gg/PGNYtbEr4e";
+      }, 200);
+    }
+  </script>
+</head>
+
+<body>
+  <div id="support-link">
+    <a href="support.html" class="btn-support">🛠 Support</a>
+  </div>
+
+  <main id="terminal" role="region" aria-label="Browser Terminal Interface">
+    <header id="banner" aria-live="polite"></header>
+    <section id="output" aria-live="polite" aria-atomic="false"></section>
+
+    <form id="terminal-form" onsubmit="return false;">
+      <label for="input" class="visually-hidden">Enter command</label>
+      <input type="text" id="input" autocomplete="off" autofocus aria-label="Terminal input" />
+    </form>
+
+    <div id="controls">
+      <button id="saveBtn" aria-label="Save terminal chat history">💾 Save Chat</button>
+    </div>
+
+    <div id="nav">
+      <a href="commands.html" class="btn-commandlist">📜 View Full Command List</a>
+      <a href="credits.html" class="btn-credits">🧪 View Terminal Credits</a>
+      <a href="tos.html" class="btn-tos">📜 Terms of Service</a>
+      <a href="privacy.html" class="btn-privacy">🔐 Privacy Policy</a>
+      <a href="#" class="btn-join-discord" onclick="openDiscord()">🎮 Join Discord!</a>
+      <a href="donate-cashapp.html" class="btn-donate">💸 Donate</a>
+      <a href="socials.html" class="btn-socials">🌐 Socials</a>
+    </div>
+
+    <footer id="footer">
+      <p>Browser Terminal 1.0.1v — Not affiliated with Microsoft Corporation</p>
+      <p>Powered by HTML, CSS, and JavaScript. Created by Hunter.</p>
+    </footer>
+  </main>
+</body>
+</html>

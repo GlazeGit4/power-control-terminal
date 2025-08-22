@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Terminal Boot</title>
+  <style>
+    body {
+      background-color: black;
+      color: #00ff00;
+      font-family: 'Courier New', monospace;
+      font-size: 1.2em;
+      padding: 20px;
+    }
+
+    .glow {
+      text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+    }
+
+    #loadingBar {
+      width: 100%;
+      background-color: #222;
+      border: 1px solid #00ff00;
+      margin-top: 20px;
+    }
+
+    #progress {
+      width: 0%;
+      height: 20px;
+      background-color: #00ff00;
+      transition: width 0.2s;
+    }
+
+    .log {
+      margin-top: 20px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="glow">Booting Terminal...</div>
+  <div id="loadingBar"><div id="progress"></div></div>
+  <div class="log" id="log"></div>
+
+  <script>
+    const log = document.getElementById('log');
+    const progress = document.getElementById('progress');
+
+    // Detect browser and assign user label
+    const ua = navigator.userAgent;
+    let browserUser = "UnknownUser";
+
+    if (ua.includes("Edg")) {
+      browserUser = "EdgeUser";
+    } else if (ua.includes("OPR") || ua.includes("Opera")) {
+      browserUser = "OperaUser";
+    } else if (ua.includes("Chrome")) {
+      browserUser = "ChroUser";
+    } else if (ua.includes("Firefox")) {
+      browserUser = "FoxUser";
+    } else if (ua.includes("Safari")) {
+      browserUser = "SafariUser";
+    }
+
+    const messages = [
+      "Loading core modules...",
+      "Injecting custom commands...",
+      "Rendering interface for user: " + browserUser,
+      "Finalizing boot sequence..."
+    ];
+
+    let index = 0;
+    function showNextMessage() {
+      if (index < messages.length) {
+        log.textContent += messages[index] + "\n";
+        progress.style.width = ((index + 1) / messages.length * 100) + "%";
+        index++;
+        setTimeout(showNextMessage, 800);
+      } else {
+        log.textContent += "Boot complete. Launching terminal...\n";
+        setTimeout(() => {
+          window.location.href = "file:///C:/Users/tigne/OneDrive/Desktop/alot%20of%20stuff/BrowserTerminal/index.html";
+        }, 1000);
+      }
+    }
+
+    showNextMessage();
+  </script>
+</body>
+</html>

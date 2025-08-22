@@ -1,0 +1,57 @@
+body {
+  background-color: #000;
+  color: #00ff00;
+  font-family: 'Cascadia Code', Consolas, monospace;
+  margin: 0;
+  padding: 0;
+}
+
+.donate-container {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 30px;
+  border: 1px solid #00ff00;
+  box-shadow: 0 0 15px #00ff00;
+  text-align: center;
+}
+
+.donate-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #00ff00;
+}
+
+.donate-text {
+  margin: 15px 0;
+  font-size: 1.1em;
+}
+
+.cash-tag {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.donate-button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 24px;
+  background-color: #000;
+  color: #00ff00;
+  border: 2px solid #00ff00;
+  text-decoration: none;
+  font-size: 1.2em;
+  box-shadow: 0 0 10px #00ff00;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.donate-button:hover {
+  color: #b6ffb6;
+  box-shadow: 0 0 15px #b6ffb6;
+}
+
+.donate-footer {
+  margin-top: 40px;
+  font-style: italic;
+  font-size: 0.95em;
+  color: #00ff00;
+}
